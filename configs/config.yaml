@@ -1,0 +1,93 @@
+# Main configuration file
+
+# Database settings
+# Use SQLite for easy setup (no server required)
+# Or switch to PostgreSQL for production
+database:
+  type: sqlite  # sqlite or postgresql
+  path: data/stock_predictor.db  # SQLite database file path
+  
+  # PostgreSQL settings (only used if type: postgresql)
+  # host: localhost
+  # port: 5432
+  # database: stock_predictor
+  # user: postgres
+  # password: ${DB_PASSWORD}  # Set in .env file
+
+# Data sources
+data_sources:
+  prices:
+    provider: yfinance
+    start_date: "2010-01-01"
+    end_date: null  # null = today
+  
+  gdelt:
+    lookback_days: 90  # How many days of news to fetch initially
+    update_frequency: daily
+  
+  finbert:
+    model_name: "ProsusAI/finbert"
+    batch_size: 32
+    device: auto  # auto, cpu, cuda
+
+# Feature engineering
+features:
+  market:
+    momentum_windows: [20, 63, 126]
+    volatility_windows: [20, 63]
+    ma_windows: [20, 63, 200]
+    relative_strength_benchmark: SPY
+  
+  media:
+    sentiment_windows: [5, 20]
+    volume_spike_window: 20
+    min_articles_per_day: 1
+
+# Labeling
+labeling:
+  method: forward_return  # or triple_barrier
+  horizons: [63, 84]
+  benchmark: SPY
+  
+  triple_barrier:
+    profit_take: 0.05  # 5% take profit
+    stop_loss: 0.03    # 3% stop loss
+    time_barrier: 63   # days
+
+# Modeling
+modeling:
+  algorithm: xgboost  # or lightgbm
+  walk_forward:
+    train_years: 6
+    validation_years: 1
+    test_years: 1
+    step_years: 1
+  
+  calibration:
+    method: isotonic  # or platt
+    enabled: true
+  
+  hyperparameters:
+    n_estimators: 200
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+
+# Backtesting (LEAN)
+backtesting:
+  start_date: "2015-01-01"
+  end_date: null
+  initial_capital: 100000
+  rebalance_frequency: weekly  # or biweekly
+  max_positions: 10
+  max_position_size: 0.15  # 15% of portfolio per position
+  transaction_cost: 0.001  # 0.1% per trade
+  slippage: 0.0005  # 0.05%
+
+# Risk management
+risk:
+  max_drawdown: 0.20  # 20% max drawdown guardrail
+  volatility_cap: 0.50  # Avoid positions with >50% annualized vol
+  market_regime_filter: true  # Reduce exposure when SPY < 200D MA
+

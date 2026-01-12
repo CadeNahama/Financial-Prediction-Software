@@ -1,0 +1,60 @@
+# Ticker configuration
+# Add tickers you want to track here
+tickers:
+  - AAPL
+  - MSFT
+  - GOOGL
+  - AMZN
+  - TSLA
+  - NVDA
+  - META
+  - SPY  # Benchmark
+
+# Company name mappings for GDELT queries
+# Maps ticker to search terms for news queries
+ticker_aliases:
+  AAPL:
+    - "Apple"
+    - "AAPL"
+    - "Tim Cook"
+  MSFT:
+    - "Microsoft"
+    - "MSFT"
+    - "Satya Nadella"
+  GOOGL:
+    - "Google"
+    - "Alphabet"
+    - "GOOGL"
+    - "Sundar Pichai"
+  AMZN:
+    - "Amazon"
+    - "AMZN"
+    - "Jeff Bezos"
+    - "Andy Jassy"
+  TSLA:
+    - "Tesla"
+    - "TSLA"
+    - "Elon Musk"
+  NVDA:
+    - "NVIDIA"
+    - "NVDA"
+    - "Jensen Huang"
+  META:
+    - "Meta"
+    - "Facebook"
+    - "META"
+    - "Mark Zuckerberg"
+  SPY:
+    - "S&P 500"
+    - "SPY"
+
+# Prediction horizons (in trading days)
+horizons:
+  short: 63   # ~3 months
+  long: 84    # ~4 months
+
+# Model thresholds
+thresholds:
+  long: 0.55      # Probability threshold for long positions
+  no_trade: 0.50  # Below this, avoid or reduce
+

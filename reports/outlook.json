@@ -1,0 +1,79 @@
+[
+  {
+    "ticker": "AAPL",
+    "date": "2026-01-11",
+    "p_up_63d": 0.5744496981302897,
+    "p_up_84d": 0.5744496981302897,
+    "recommended_action": "Long",
+    "suggested_size": 0.022334909439086902,
+    "current_price": 259.3699951171875,
+    "volatility": 0.1103594784189529,
+    "key_feature_drivers": null
+  },
+  {
+    "ticker": "MSFT",
+    "date": "2026-01-11",
+    "p_up_63d": 0.5479653477668762,
+    "p_up_84d": 0.5479653477668762,
+    "recommended_action": "No Trade",
+    "suggested_size": 0.014389604330062866,
+    "current_price": 479.2799987792969,
+    "volatility": 0.1423514908737655,
+    "key_feature_drivers": null
+  },
+  {
+    "ticker": "GOOGL",
+    "date": "2026-01-11",
+    "p_up_63d": 0.5736374060312907,
+    "p_up_84d": 0.5736374060312907,
+    "recommended_action": "Long",
+    "suggested_size": 0.022091221809387194,
+    "current_price": 328.57000732421875,
+    "volatility": 0.21724213990003494,
+    "key_feature_drivers": null
+  },
+  {
+    "ticker": "AMZN",
+    "date": "2026-01-11",
+    "p_up_63d": 0.6082199215888977,
+    "p_up_84d": 0.6082199215888977,
+    "recommended_action": "Long",
+    "suggested_size": 0.03246597647666931,
+    "current_price": 247.3800048828125,
+    "volatility": 0.23421580137228543,
+    "key_feature_drivers": null
+  },
+  {
+    "ticker": "TSLA",
+    "date": "2026-01-11",
+    "p_up_63d": 0.5479653477668762,
+    "p_up_84d": 0.5479653477668762,
+    "recommended_action": "No Trade",
+    "suggested_size": 0.014389604330062866,
+    "current_price": 445.010009765625,
+    "volatility": 0.4043596838431119,
+    "key_feature_drivers": null
+  },
+  {
+    "ticker": "NVDA",
+    "date": "2026-01-11",
+    "p_up_63d": 0.5744496981302897,
+    "p_up_84d": 0.5744496981302897,
+    "recommended_action": "Long",
+    "suggested_size": 0.022334909439086902,
+    "current_price": 184.86000061035156,
+    "volatility": 0.3039216097762991,
+    "key_feature_drivers": null
+  },
+  {
+    "ticker": "META",
+    "date": "2026-01-11",
+    "p_up_63d": 0.5487776398658752,
+    "p_up_84d": 0.5487776398658752,
+    "recommended_action": "No Trade",
+    "suggested_size": 0.014633291959762573,
+    "current_price": 653.0599975585938,
+    "volatility": 0.17742659385120277,
+    "key_feature_drivers": null
+  }
+]
