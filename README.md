@@ -2,6 +2,39 @@
 
 A comprehensive machine learning system for predicting 3-4 month directional stock outlooks using market data, macroeconomic indicators, and media sentiment analysis. Built with rigorous time-series validation, risk-aware position sizing, and production-ready backtesting capabilities.
 
+## Accessing the Repository
+
+This is an open-source project available on GitHub. To get started:
+
+```bash
+git clone https://github.com/CadeNahama/Financial-Prediction-Software.git
+cd Financial-Prediction-Software
+```
+
+For the latest updates:
+
+```bash
+git pull origin main
+```
+
+To contribute or report issues, visit the repository: https://github.com/CadeNahama/Financial-Prediction-Software
+
+## Use Cases
+
+This system is designed for quantitative analysts, portfolio managers, and algorithmic traders who need:
+
+**Institutional Research**: Generate systematic, data-driven outlooks for equity portfolios with proper risk management and validation. The walk-forward validation ensures realistic performance expectations before deploying capital.
+
+**Systematic Trading**: Build an automated trading pipeline that combines technical analysis, macro factors, and sentiment data. The system outputs position sizing recommendations based on probability and volatility, enabling risk-aware portfolio construction.
+
+**Portfolio Management**: Monitor medium-term (3-4 month) directional probabilities across multiple tickers simultaneously. Use the JSON output to inform rebalancing decisions, with built-in volatility caps and maximum position size limits.
+
+**Research & Development**: Experiment with different feature sets, labeling strategies (forward returns vs triple barrier), and model architectures. The modular design allows researchers to swap components (e.g., try different sentiment models or add new data sources).
+
+**Educational**: Learn production-grade ML pipeline design for financial applications. The codebase demonstrates proper time-series validation, feature engineering, probability calibration, and realistic backtesting practices.
+
+The system is particularly useful for strategies targeting 52-56% directional win rates over 3-4 month horizons, where small edges compound over time with proper risk management.
+
 ## Overview
 
 This system combines quantitative finance, natural language processing, and machine learning to generate probabilistic predictions about stock price movements over 63-84 trading days (approximately 3-4 months). The system is designed for institutional-quality analysis with proper validation, risk management, and realistic backtesting.
